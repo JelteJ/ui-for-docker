@@ -29,9 +29,7 @@ angular.module('containerLogs', [])
                 }, function (data, status, headers, config) {
                     // Replace carriage returns with newlines to clean up output
                     data = data.replace(/[\r]/g, '\n');
-                    // Strip 8 byte header from each line of output
-                    data = data.substring(8);
-                    data = data.replace(/\n(.{8})/g, '\n');
+                    
                     $scope.stdout = data;
                     ViewSpinner.stop();
                 });
@@ -44,9 +42,7 @@ angular.module('containerLogs', [])
                 }, function (data, status, headers, config) {
                     // Replace carriage returns with newlines to clean up output
                     data = data.replace(/[\r]/g, '\n');
-                    // Strip 8 byte header from each line of output
-                    data = data.substring(8);
-                    data = data.replace(/\n(.{8})/g, '\n');
+                    
                     $scope.stderr = data;
                     ViewSpinner.stop();
                 });
