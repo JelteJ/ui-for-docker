@@ -10,6 +10,7 @@
 
     <div class="btn-group detail">
         <button class="btn btn-success" data-toggle="modal" data-target="#create-modal">Start Container</button>
+        <button class="btn btn-danger" ng-click="removeImage(id)">Remove Image</button>
     </div>
 
     <div>
@@ -110,11 +111,5 @@
                 <input type="button" ng-click="addTag()" value="Add Tag" class="btn btn-primary"/>
             </fieldset>
         </form>
-    </div>
-
-    <hr/>
-
-    <div class="btn-remove">
-        <button class="btn btn-large btn-block btn-primary btn-danger" ng-click="removeImage(id)">Remove Image</button>
     </div>
 </div>
